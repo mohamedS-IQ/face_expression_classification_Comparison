@@ -1,0 +1,9 @@
+train/
+validation/
+test/
+results/
+qwen_lora/
+ferplus_cache.npz
+__pycache__/
+.idea/
+.ipynb_checkpoints/
