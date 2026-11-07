@@ -1,0 +1,33 @@
+epoch   1   loss 1.8944   val accuracy 0.3458
+epoch   2   loss 1.5540   val accuracy 0.5250
+epoch   3   loss 1.3769   val accuracy 0.5951
+epoch   4   loss 1.2678   val accuracy 0.6207
+epoch   5   loss 1.1974   val accuracy 0.6074
+epoch   6   loss 1.1028   val accuracy 0.6433
+epoch   7   loss 1.0296   val accuracy 0.6452
+epoch   8   loss 0.9682   val accuracy 0.6472
+epoch   9   loss 0.9099   val accuracy 0.6751
+epoch  10   loss 0.8575   val accuracy 0.6514
+epoch  11   loss 0.8160   val accuracy 0.6726
+epoch  12   loss 0.7782   val accuracy 0.6721
+epoch  13   loss 0.7454   val accuracy 0.6647
+epoch  14   loss 0.6947   val accuracy 0.6711
+epoch  15   loss 0.6436   val accuracy 0.6666
+epoch  16   loss 0.6169   val accuracy 0.6831
+epoch  17   loss 0.5890   val accuracy 0.6703
+epoch  18   loss 0.5643   val accuracy 0.6734
+epoch  19   loss 0.5392   val accuracy 0.6677
+epoch  20   loss 0.5133   val accuracy 0.6801
+epoch  21   loss 0.4904   val accuracy 0.6762
+epoch  22   loss 0.4734   val accuracy 0.6789
+epoch  23   loss 0.4548   val accuracy 0.6805
+epoch  24   loss 0.4455   val accuracy 0.6644
+epoch  25   loss 0.4416   val accuracy 0.6892
+epoch  26   loss 0.4220   val accuracy 0.6975
+epoch  27   loss 0.4147   val accuracy 0.6890
+epoch  28   loss 0.3975   val accuracy 0.6988
+epoch  29   loss 0.3896   val accuracy 0.6746
+epoch  30   loss 0.3807   val accuracy 0.6884
+best val accuracy 0.6988
+cnn: accuracy 0.7646   macro F1 0.6064   train 1809.51 s   inference 0.266 ms/image
+saved D:\face_expression_classification_Comparison-main\results\cnn.json
