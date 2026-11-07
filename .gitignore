@@ -1,7 +1,5 @@
-train/
-validation/
-test/
-results/
+results/*
+!results/.gitkeep
 qwen_lora/
 ferplus_cache.npz
 __pycache__/

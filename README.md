@@ -6,7 +6,7 @@ Four models compared on the same images: an MLP, a CNN, Qwen2-VL-2B zero-shot, a
 
 1. Install Python 3.10 or newer.
 2. Install PyTorch with CUDA from pytorch.org, then `pip install -r requirements.txt`.
-3. Download the FER+ dataset and place its `train/`, `validation/` and `test/` folders next to the scripts. Each folder holds one sub-folder per emotion (angry, contempt, disgust, fear, happy, neutral, sad, suprise) with PNG images.
+3. The FER+ dataset is included: `train/`, `validation/` and `test/` each hold one sub-folder per emotion (angry, contempt, disgust, fear, happy, neutral, sad, suprise) with PNG images.
 
 ## Run
 
