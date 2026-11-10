@@ -1,8 +1,9 @@
+import torch
 import torch.nn as nn
 
 import common
 
-EPOCHS = 30
+EPOCHS = 80
 LEARNING_RATE = 1e-3
 
 
@@ -31,14 +32,19 @@ def main():
     train_set = common.FaceDataset(data["x_train"][:args.n_train], data["y_train"][:args.n_train])
     val_set = common.FaceDataset(data["x_val"], data["y_val"])
     test_set = common.FaceDataset(data["x_test"][:args.n_test], data["y_test"][:args.n_test])
+    internet_x, internet_y = common.load_internet_images()
 
     model = MLP()
     with common.Timer() as train_timer:
         common.train_model(model, train_set, val_set, epochs=args.epochs, lr=LEARNING_RATE)
+    common.warm_up(model, test_set)
     with common.Timer() as test_timer:
         predictions = common.predict(model, test_set)
+    internet = common.predict(model, common.FaceDataset(internet_x, internet_y))
 
-    common.report("mlp", data["y_test"][:args.n_test], predictions, model, train_timer.seconds, test_timer.seconds)
+    y_test = data["y_test"][:args.n_test]
+    common.report("mlp", y_test, predictions, model, train_timer.seconds, test_timer.seconds, internet)
+    torch.save(model.state_dict(), common.RESULTS_DIR / "mlp.pt")
 
 
 if __name__ == "__main__":

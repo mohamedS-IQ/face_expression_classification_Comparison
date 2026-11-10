@@ -21,8 +21,9 @@ IMAGE_SIZE = 48
 PROJECT_DIR = Path(__file__).resolve().parent
 CACHE_PATH = PROJECT_DIR / "ferplus_cache.npz"
 RESULTS_DIR = PROJECT_DIR / "results"
+INTERNET_DIR = PROJECT_DIR / "internet_images"
 
-# Set DISABLE_MIOPEN=1 to use native PyTorch kernels instead of MIOpen on AMD (how cnn_no_miopen.json was made).
+
 if torch.version.hip and os.environ.get("DISABLE_MIOPEN") == "1":
     torch.backends.cudnn.enabled = False
 
@@ -67,12 +68,16 @@ class Timer:
         self.seconds = time.perf_counter() - self.start
 
 
+def load_image(path):
+    image = Image.open(path).convert("L").resize((IMAGE_SIZE, IMAGE_SIZE))
+    return np.asarray(image, dtype=np.uint8)
+
+
 def load_split(folder):
     images, labels = [], []
     for label, name in enumerate(FOLDERS):
         for path in sorted((folder / name).glob("*.png")):
-            image = Image.open(path).convert("L").resize((IMAGE_SIZE, IMAGE_SIZE))
-            images.append(np.asarray(image, dtype=np.uint8))
+            images.append(load_image(path))
             labels.append(label)
     images, labels = np.stack(images), np.array(labels, dtype=np.int64)
     order = np.random.RandomState(0).permutation(len(labels))
@@ -88,6 +93,12 @@ def load_data():
         print(f"loaded {folder}: {len(data[f'y_{name}'])} images")
     np.savez(CACHE_PATH, **data)
     return data
+
+
+def load_internet_images():
+    images = np.stack([load_image(INTERNET_DIR / f"{name.lower()}.png") for name in EMOTIONS])
+    labels = np.arange(len(EMOTIONS), dtype=np.int64)
+    return images, labels
 
 
 class FaceDataset(Dataset):
@@ -114,6 +125,10 @@ def predict(model, dataset, batch_size=512):
         for x, _ in DataLoader(dataset, batch_size=batch_size):
             predictions.append(model(x.to(device)).argmax(dim=1).cpu())
     return torch.cat(predictions).numpy()
+
+
+def warm_up(model, dataset):
+    predict(model, dataset)
 
 
 def train_model(model, train_set, val_set, epochs, lr=1e-3, batch_size=128):
@@ -163,7 +178,7 @@ def model_size_mb(model):
     return (param_bytes + buffer_bytes) / 1e6
 
 
-def report(name, y_true, y_pred, model, train_time_s, inference_time_s, extra=None):
+def report(name, y_true, y_pred, model, train_time_s, inference_time_s, internet_pred, extra=None):
     y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
     results = {
         "model": name,
@@ -176,6 +191,7 @@ def report(name, y_true, y_pred, model, train_time_s, inference_time_s, extra=No
         "size_mb": round(model_size_mb(model), 2),
         "peak_gpu_mb": round(torch.cuda.max_memory_allocated() / 1e6, 1) if torch.cuda.is_available() else 0.0,
         **(extra or {}),
+        "internet_predictions": [EMOTIONS[p] if p >= 0 else "unclear" for p in internet_pred],
         "predictions": y_pred.tolist(),
     }
     RESULTS_DIR.mkdir(exist_ok=True)
@@ -184,6 +200,8 @@ def report(name, y_true, y_pred, model, train_time_s, inference_time_s, extra=No
         json.dump(results, f, indent=2)
     print(f"{name}: accuracy {results['accuracy']:.4f}   macro F1 {results['macro_f1']:.4f}   "
           f"train {results['train_time_s']} s   inference {results['inference_ms_per_image']} ms/image")
+    pairs = [f"{true} -> {guess}" for true, guess in zip(EMOTIONS, results["internet_predictions"])]
+    print("internet images (true -> predicted): " + ", ".join(pairs))
     print(f"saved {path}")
     return results
 
@@ -195,6 +213,7 @@ if __name__ == "__main__":
     for name in SPLITS.values():
         counts = np.bincount(data[f"y_{name}"], minlength=len(EMOTIONS))
         print(f"{name}: {len(data[f'y_{name}'])} images, per emotion {dict(zip(EMOTIONS, counts.tolist()))}")
+    print(f"internet images: {len(load_internet_images()[0])}")
 
     fig, axes = plt.subplots(1, len(EMOTIONS), figsize=(16, 2.5))
     for label, ax in enumerate(axes):

@@ -69,13 +69,17 @@ def main():
     common.set_seed()
     data = common.load_data()
     x_test, y_test = data["x_test"][:args.n_test], data["y_test"][:args.n_test]
+    internet_x, _ = common.load_internet_images()
 
     model, processor = load_model()
+    warm_up_images = x_test[:BATCH_SIZE]
+    predict_all(model, processor, warm_up_images)
     with common.Timer() as test_timer:
         predictions = predict_all(model, processor, x_test)
+    internet = predict_all(model, processor, internet_x)
 
-    unparsed = sum(p == -1 for p in predictions)
-    common.report("qwen_zeroshot", y_test, predictions, model, 0.0, test_timer.seconds, extra={"unparsed": unparsed})
+    extra = {"unparsed": sum(p == -1 for p in predictions)}
+    common.report("qwen_zeroshot", y_test, predictions, model, 0.0, test_timer.seconds, internet, extra=extra)
 
 
 if __name__ == "__main__":
