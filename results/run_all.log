@@ -1,0 +1,5 @@
+mlp             ok            2.6 minutes
+cnn             ok           24.6 minutes
+qwen_zeroshot   ok            2.9 minutes
+qwen_finetune   ok          295.2 minutes
+analysis        ok            0.2 minutes

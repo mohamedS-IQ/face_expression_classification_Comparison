@@ -3,3 +3,6 @@ ferplus_cache.npz
 __pycache__/
 .idea/
 .ipynb_checkpoints/
+qwen_merged/
+llama.cpp/
+old_project/

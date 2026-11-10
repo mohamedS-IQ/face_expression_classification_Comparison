@@ -7,3 +7,4 @@ transformers>=4.56
 peft
 accelerate
 jupyter
+sentencepiece

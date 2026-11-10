@@ -1,0 +1,1425 @@
+
+Loading weights:   0%|          | 0/729 [00:00<?, ?it/s]
+Loading weights:   2%|▏         | 15/729 [00:00<00:05, 133.39it/s]
+Loading weights:   4%|▍         | 29/729 [00:00<00:05, 125.18it/s]
+Loading weights:   6%|▌         | 43/729 [00:00<00:05, 117.76it/s]
+Loading weights:   8%|▊         | 55/729 [00:00<00:06, 104.67it/s]
+Loading weights:   9%|▉         | 68/729 [00:00<00:06, 107.81it/s]
+Loading weights:  11%|█         | 79/729 [00:00<00:06, 103.70it/s]
+Loading weights:  12%|█▏        | 90/729 [00:00<00:06, 102.47it/s]
+Loading weights:  15%|█▍        | 107/729 [00:00<00:05, 116.87it/s]
+Loading weights:  19%|█▊        | 135/729 [00:01<00:03, 158.73it/s]
+Loading weights:  22%|██▏       | 162/729 [00:01<00:02, 189.78it/s]
+Loading weights:  26%|██▌       | 190/729 [00:01<00:02, 211.41it/s]
+Loading weights:  29%|██▉       | 214/729 [00:01<00:02, 218.97it/s]
+Loading weights:  33%|███▎      | 238/729 [00:01<00:02, 223.85it/s]
+Loading weights:  37%|███▋      | 269/729 [00:01<00:01, 241.22it/s]
+Loading weights: 100%|██████████| 729/729 [00:01<00:00, 454.32it/s]
+trainable params: 4,358,144 || all params: 2,213,343,744 || trainable%: 0.1969
+C:\Users\Haider\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\integrations\sdpa_attention.py:174: UserWarning: Flash Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at B:/src/pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:425.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+C:\Users\Haider\AppData\Local\Programs\Python\Python312\Lib\site-packages\transformers\integrations\sdpa_attention.py:174: UserWarning: Mem Efficient attention on Current AMD GPU is still experimental. Enable it with TORCH_ROCM_AOTRITON_ENABLE_EXPERIMENTAL=1. (Triggered internally at B:/src/pytorch/aten/src/ATen/native/transformers/hip/sdp_utils.cpp:485.)
+  attn_output = torch.nn.functional.scaled_dot_product_attention(
+epoch 1   step 50/8298   loss 0.3221
+epoch 1   step 100/8298   loss 0.3705
+epoch 1   step 150/8298   loss 0.3769
+epoch 1   step 200/8298   loss 0.1963
+epoch 1   step 250/8298   loss 0.3297
+epoch 1   step 300/8298   loss 0.1996
+epoch 1   step 350/8298   loss 0.2218
+epoch 1   step 400/8298   loss 0.2262
+epoch 1   step 450/8298   loss 0.3643
+epoch 1   step 500/8298   loss 0.4693
+epoch 1   step 550/8298   loss 0.3255
+epoch 1   step 600/8298   loss 0.2451
+epoch 1   step 650/8298   loss 0.3703
+epoch 1   step 700/8298   loss 0.2485
+epoch 1   step 750/8298   loss 0.2280
+epoch 1   step 800/8298   loss 0.3210
+epoch 1   step 850/8298   loss 0.2156
+epoch 1   step 900/8298   loss 0.5205
+epoch 1   step 950/8298   loss 0.3650
+epoch 1   step 1000/8298   loss 0.5910
+epoch 1   step 1050/8298   loss 0.1953
+epoch 1   step 1100/8298   loss 0.2799
+epoch 1   step 1150/8298   loss 0.2612
+epoch 1   step 1200/8298   loss 0.3539
+epoch 1   step 1250/8298   loss 0.1936
+epoch 1   step 1300/8298   loss 0.4253
+epoch 1   step 1350/8298   loss 0.4026
+epoch 1   step 1400/8298   loss 0.1717
+epoch 1   step 1450/8298   loss 0.1620
+epoch 1   step 1500/8298   loss 0.3159
+epoch 1   step 1550/8298   loss 0.1282
+epoch 1   step 1600/8298   loss 0.1560
+epoch 1   step 1650/8298   loss 0.2008
+epoch 1   step 1700/8298   loss 0.2118
+epoch 1   step 1750/8298   loss 0.0474
+epoch 1   step 1800/8298   loss 0.1196
+epoch 1   step 1850/8298   loss 0.2299
+epoch 1   step 1900/8298   loss 0.1851
+epoch 1   step 1950/8298   loss 0.2403
+epoch 1   step 2000/8298   loss 0.1445
+epoch 1   step 2050/8298   loss 0.1810
+epoch 1   step 2100/8298   loss 0.2202
+epoch 1   step 2150/8298   loss 0.0870
+epoch 1   step 2200/8298   loss 0.3682
+epoch 1   step 2250/8298   loss 0.4528
+epoch 1   step 2300/8298   loss 0.0931
+epoch 1   step 2350/8298   loss 0.2973
+epoch 1   step 2400/8298   loss 0.2920
+epoch 1   step 2450/8298   loss 0.1669
+epoch 1   step 2500/8298   loss 0.1607
+epoch 1   step 2550/8298   loss 0.1868
+epoch 1   step 2600/8298   loss 0.1695
+epoch 1   step 2650/8298   loss 0.0625
+epoch 1   step 2700/8298   loss 0.1457
+epoch 1   step 2750/8298   loss 0.0713
+epoch 1   step 2800/8298   loss 0.0542
+epoch 1   step 2850/8298   loss 0.1488
+epoch 1   step 2900/8298   loss 0.3413
+epoch 1   step 2950/8298   loss 0.1674
+epoch 1   step 3000/8298   loss 0.1003
+epoch 1   step 3050/8298   loss 0.1175
+epoch 1   step 3100/8298   loss 0.1975
+epoch 1   step 3150/8298   loss 0.1440
+epoch 1   step 3200/8298   loss 0.2065
+epoch 1   step 3250/8298   loss 0.0591
+epoch 1   step 3300/8298   loss 0.1257
+epoch 1   step 3350/8298   loss 0.2306
+epoch 1   step 3400/8298   loss 0.1582
+epoch 1   step 3450/8298   loss 0.1752
+epoch 1   step 3500/8298   loss 0.3379
+epoch 1   step 3550/8298   loss 0.2853
+epoch 1   step 3600/8298   loss 0.1032
+epoch 1   step 3650/8298   loss 0.5505
+epoch 1   step 3700/8298   loss 0.0384
+epoch 1   step 3750/8298   loss 0.2321
+epoch 1   step 3800/8298   loss 0.3215
+epoch 1   step 3850/8298   loss 0.1991
+epoch 1   step 3900/8298   loss 0.2706
+epoch 1   step 3950/8298   loss 0.1347
+epoch 1   step 4000/8298   loss 0.3060
+epoch 1   step 4050/8298   loss 0.1455
+epoch 1   step 4100/8298   loss 0.2117
+epoch 1   step 4150/8298   loss 0.0354
+epoch 1   step 4200/8298   loss 0.1153
+epoch 1   step 4250/8298   loss 0.3301
+epoch 1   step 4300/8298   loss 0.2178
+epoch 1   step 4350/8298   loss 0.0367
+epoch 1   step 4400/8298   loss 0.1384
+epoch 1   step 4450/8298   loss 0.4916
+epoch 1   step 4500/8298   loss 0.1997
+epoch 1   step 4550/8298   loss 0.0923
+epoch 1   step 4600/8298   loss 0.1429
+epoch 1   step 4650/8298   loss 0.0498
+epoch 1   step 4700/8298   loss 0.1951
+epoch 1   step 4750/8298   loss 0.1956
+epoch 1   step 4800/8298   loss 0.4324
+epoch 1   step 4850/8298   loss 0.2625
+epoch 1   step 4900/8298   loss 0.1594
+epoch 1   step 4950/8298   loss 0.1728
+epoch 1   step 5000/8298   loss 0.1608
+epoch 1   step 5050/8298   loss 0.0511
+epoch 1   step 5100/8298   loss 0.1658
+epoch 1   step 5150/8298   loss 0.2583
+epoch 1   step 5200/8298   loss 0.3453
+epoch 1   step 5250/8298   loss 0.1937
+epoch 1   step 5300/8298   loss 0.0922
+epoch 1   step 5350/8298   loss 0.0046
+epoch 1   step 5400/8298   loss 0.0911
+epoch 1   step 5450/8298   loss 0.2287
+epoch 1   step 5500/8298   loss 0.0975
+epoch 1   step 5550/8298   loss 0.1337
+epoch 1   step 5600/8298   loss 0.0633
+epoch 1   step 5650/8298   loss 0.1276
+epoch 1   step 5700/8298   loss 0.2462
+epoch 1   step 5750/8298   loss 0.1700
+epoch 1   step 5800/8298   loss 0.0802
+epoch 1   step 5850/8298   loss 0.0656
+epoch 1   step 5900/8298   loss 0.0398
+epoch 1   step 5950/8298   loss 0.1753
+epoch 1   step 6000/8298   loss 0.0553
+epoch 1   step 6050/8298   loss 0.0952
+epoch 1   step 6100/8298   loss 0.1205
+epoch 1   step 6150/8298   loss 0.0912
+epoch 1   step 6200/8298   loss 0.0462
+epoch 1   step 6250/8298   loss 0.2375
+epoch 1   step 6300/8298   loss 0.0614
+epoch 1   step 6350/8298   loss 0.1404
+epoch 1   step 6400/8298   loss 0.0786
+epoch 1   step 6450/8298   loss 0.1293
+epoch 1   step 6500/8298   loss 0.2344
+epoch 1   step 6550/8298   loss 0.0225
+epoch 1   step 6600/8298   loss 0.1303
+epoch 1   step 6650/8298   loss 0.0866
+epoch 1   step 6700/8298   loss 0.1907
+epoch 1   step 6750/8298   loss 0.0460
+epoch 1   step 6800/8298   loss 0.1299
+epoch 1   step 6850/8298   loss 0.1297
+epoch 1   step 6900/8298   loss 0.1616
+epoch 1   step 6950/8298   loss 0.0875
+epoch 1   step 7000/8298   loss 0.1319
+epoch 1   step 7050/8298   loss 0.0847
+epoch 1   step 7100/8298   loss 0.1086
+epoch 1   step 7150/8298   loss 0.0352
+epoch 1   step 7200/8298   loss 0.1931
+epoch 1   step 7250/8298   loss 0.1206
+epoch 1   step 7300/8298   loss 0.1253
+epoch 1   step 7350/8298   loss 0.2043
+epoch 1   step 7400/8298   loss 0.4926
+epoch 1   step 7450/8298   loss 0.2708
+epoch 1   step 7500/8298   loss 0.0558
+epoch 1   step 7550/8298   loss 0.2591
+epoch 1   step 7600/8298   loss 0.0473
+epoch 1   step 7650/8298   loss 0.0953
+epoch 1   step 7700/8298   loss 0.2819
+epoch 1   step 7750/8298   loss 0.1307
+epoch 1   step 7800/8298   loss 0.0802
+epoch 1   step 7850/8298   loss 0.1979
+epoch 1   step 7900/8298   loss 0.2751
+epoch 1   step 7950/8298   loss 0.2122
+epoch 1   step 8000/8298   loss 0.2042
+epoch 1   step 8050/8298   loss 0.2441
+epoch 1   step 8100/8298   loss 0.1143
+epoch 1   step 8150/8298   loss 0.0805
+epoch 1   step 8200/8298   loss 0.0827
+epoch 1   step 8250/8298   loss 0.2501
+epoch 1   step 8298/8298   loss 0.0224
+16/2000
+32/2000
+48/2000
+64/2000
+80/2000
+96/2000
+112/2000
+128/2000
+144/2000
+160/2000
+176/2000
+192/2000
+208/2000
+224/2000
+240/2000
+256/2000
+272/2000
+288/2000
+304/2000
+320/2000
+336/2000
+352/2000
+368/2000
+384/2000
+400/2000
+416/2000
+432/2000
+448/2000
+464/2000
+480/2000
+496/2000
+512/2000
+528/2000
+544/2000
+560/2000
+576/2000
+592/2000
+608/2000
+624/2000
+640/2000
+656/2000
+672/2000
+688/2000
+704/2000
+720/2000
+736/2000
+752/2000
+768/2000
+784/2000
+800/2000
+816/2000
+832/2000
+848/2000
+864/2000
+880/2000
+896/2000
+912/2000
+928/2000
+944/2000
+960/2000
+976/2000
+992/2000
+1008/2000
+1024/2000
+1040/2000
+1056/2000
+1072/2000
+1088/2000
+1104/2000
+1120/2000
+1136/2000
+1152/2000
+1168/2000
+1184/2000
+1200/2000
+1216/2000
+1232/2000
+1248/2000
+1264/2000
+1280/2000
+1296/2000
+1312/2000
+1328/2000
+1344/2000
+1360/2000
+1376/2000
+1392/2000
+1408/2000
+1424/2000
+1440/2000
+1456/2000
+1472/2000
+1488/2000
+1504/2000
+1520/2000
+1536/2000
+1552/2000
+1568/2000
+1584/2000
+1600/2000
+1616/2000
+1632/2000
+1648/2000
+1664/2000
+1680/2000
+1696/2000
+1712/2000
+1728/2000
+1744/2000
+1760/2000
+1776/2000
+1792/2000
+1808/2000
+1824/2000
+1840/2000
+1856/2000
+1872/2000
+1888/2000
+1904/2000
+1920/2000
+1936/2000
+1952/2000
+1968/2000
+1984/2000
+2000/2000
+
+epoch 1   val accuracy 0.7110
+epoch 2   step 50/8298   loss 0.1791
+epoch 2   step 100/8298   loss 0.0511
+epoch 2   step 150/8298   loss 0.0458
+epoch 2   step 200/8298   loss 0.0902
+epoch 2   step 250/8298   loss 0.0902
+epoch 2   step 300/8298   loss 0.3942
+epoch 2   step 350/8298   loss 0.2602
+epoch 2   step 400/8298   loss 0.0272
+epoch 2   step 450/8298   loss 0.1872
+epoch 2   step 500/8298   loss 0.0332
+epoch 2   step 550/8298   loss 0.0395
+epoch 2   step 600/8298   loss 0.0280
+epoch 2   step 650/8298   loss 0.1508
+epoch 2   step 700/8298   loss 0.2743
+epoch 2   step 750/8298   loss 0.0822
+epoch 2   step 800/8298   loss 0.0850
+epoch 2   step 850/8298   loss 0.1428
+epoch 2   step 900/8298   loss 0.1546
+epoch 2   step 950/8298   loss 0.0216
+epoch 2   step 1000/8298   loss 0.0111
+epoch 2   step 1050/8298   loss 0.0988
+epoch 2   step 1100/8298   loss 0.1804
+epoch 2   step 1150/8298   loss 0.1427
+epoch 2   step 1200/8298   loss 0.1197
+epoch 2   step 1250/8298   loss 0.0888
+epoch 2   step 1300/8298   loss 0.3691
+epoch 2   step 1350/8298   loss 0.1141
+epoch 2   step 1400/8298   loss 0.0737
+epoch 2   step 1450/8298   loss 0.1632
+epoch 2   step 1500/8298   loss 0.2074
+epoch 2   step 1550/8298   loss 0.3698
+epoch 2   step 1600/8298   loss 0.0206
+epoch 2   step 1650/8298   loss 0.0317
+epoch 2   step 1700/8298   loss 0.0908
+epoch 2   step 1750/8298   loss 0.0564
+epoch 2   step 1800/8298   loss 0.2307
+epoch 2   step 1850/8298   loss 0.3579
+epoch 2   step 1900/8298   loss 0.1733
+epoch 2   step 1950/8298   loss 0.1026
+epoch 2   step 2000/8298   loss 0.1184
+epoch 2   step 2050/8298   loss 0.2196
+epoch 2   step 2100/8298   loss 0.0189
+epoch 2   step 2150/8298   loss 0.1097
+epoch 2   step 2200/8298   loss 0.0946
+epoch 2   step 2250/8298   loss 0.1027
+epoch 2   step 2300/8298   loss 0.3537
+epoch 2   step 2350/8298   loss 0.0634
+epoch 2   step 2400/8298   loss 0.1045
+epoch 2   step 2450/8298   loss 0.1059
+epoch 2   step 2500/8298   loss 0.1382
+epoch 2   step 2550/8298   loss 0.0287
+epoch 2   step 2600/8298   loss 0.1370
+epoch 2   step 2650/8298   loss 0.1406
+epoch 2   step 2700/8298   loss 0.0444
+epoch 2   step 2750/8298   loss 0.0685
+epoch 2   step 2800/8298   loss 0.0459
+epoch 2   step 2850/8298   loss 0.0772
+epoch 2   step 2900/8298   loss 0.3003
+epoch 2   step 2950/8298   loss 0.0355
+epoch 2   step 3000/8298   loss 0.0671
+epoch 2   step 3050/8298   loss 0.0487
+epoch 2   step 3100/8298   loss 0.1393
+epoch 2   step 3150/8298   loss 0.0482
+epoch 2   step 3200/8298   loss 0.2434
+epoch 2   step 3250/8298   loss 0.0467
+epoch 2   step 3300/8298   loss 0.2322
+epoch 2   step 3350/8298   loss 0.0242
+epoch 2   step 3400/8298   loss 0.1013
+epoch 2   step 3450/8298   loss 0.1045
+epoch 2   step 3500/8298   loss 0.0918
+epoch 2   step 3550/8298   loss 0.2449
+epoch 2   step 3600/8298   loss 0.1322
+epoch 2   step 3650/8298   loss 0.0857
+epoch 2   step 3700/8298   loss 0.1325
+epoch 2   step 3750/8298   loss 0.0588
+epoch 2   step 3800/8298   loss 0.2094
+epoch 2   step 3850/8298   loss 0.1408
+epoch 2   step 3900/8298   loss 0.0111
+epoch 2   step 3950/8298   loss 0.1127
+epoch 2   step 4000/8298   loss 0.0995
+epoch 2   step 4050/8298   loss 0.0521
+epoch 2   step 4100/8298   loss 0.0165
+epoch 2   step 4150/8298   loss 0.0668
+epoch 2   step 4200/8298   loss 0.2085
+epoch 2   step 4250/8298   loss 0.0134
+epoch 2   step 4300/8298   loss 0.2470
+epoch 2   step 4350/8298   loss 0.2147
+epoch 2   step 4400/8298   loss 0.4011
+epoch 2   step 4450/8298   loss 0.0613
+epoch 2   step 4500/8298   loss 0.0389
+epoch 2   step 4550/8298   loss 0.0408
+epoch 2   step 4600/8298   loss 0.1845
+epoch 2   step 4650/8298   loss 0.0957
+epoch 2   step 4700/8298   loss 0.1660
+epoch 2   step 4750/8298   loss 0.0256
+epoch 2   step 4800/8298   loss 0.0637
+epoch 2   step 4850/8298   loss 0.1469
+epoch 2   step 4900/8298   loss 0.1890
+epoch 2   step 4950/8298   loss 0.1479
+epoch 2   step 5000/8298   loss 0.0572
+epoch 2   step 5050/8298   loss 0.1132
+epoch 2   step 5100/8298   loss 0.0932
+epoch 2   step 5150/8298   loss 0.1120
+epoch 2   step 5200/8298   loss 0.1416
+epoch 2   step 5250/8298   loss 0.2290
+epoch 2   step 5300/8298   loss 0.0122
+epoch 2   step 5350/8298   loss 0.1963
+epoch 2   step 5400/8298   loss 0.0365
+epoch 2   step 5450/8298   loss 0.0537
+epoch 2   step 5500/8298   loss 0.0381
+epoch 2   step 5550/8298   loss 0.2651
+epoch 2   step 5600/8298   loss 0.2050
+epoch 2   step 5650/8298   loss 0.2838
+epoch 2   step 5700/8298   loss 0.0167
+epoch 2   step 5750/8298   loss 0.2700
+epoch 2   step 5800/8298   loss 0.1126
+epoch 2   step 5850/8298   loss 0.0334
+epoch 2   step 5900/8298   loss 0.2406
+epoch 2   step 5950/8298   loss 0.1388
+epoch 2   step 6000/8298   loss 0.0645
+epoch 2   step 6050/8298   loss 0.1550
+epoch 2   step 6100/8298   loss 0.1625
+epoch 2   step 6150/8298   loss 0.2221
+epoch 2   step 6200/8298   loss 0.1839
+epoch 2   step 6250/8298   loss 0.0874
+epoch 2   step 6300/8298   loss 0.2083
+epoch 2   step 6350/8298   loss 0.0304
+epoch 2   step 6400/8298   loss 0.0362
+epoch 2   step 6450/8298   loss 0.0115
+epoch 2   step 6500/8298   loss 0.0094
+epoch 2   step 6550/8298   loss 0.1072
+epoch 2   step 6600/8298   loss 0.0340
+epoch 2   step 6650/8298   loss 0.1549
+epoch 2   step 6700/8298   loss 0.0853
+epoch 2   step 6750/8298   loss 0.2021
+epoch 2   step 6800/8298   loss 0.1125
+epoch 2   step 6850/8298   loss 0.0702
+epoch 2   step 6900/8298   loss 0.0886
+epoch 2   step 6950/8298   loss 0.0313
+epoch 2   step 7000/8298   loss 0.0296
+epoch 2   step 7050/8298   loss 0.0760
+epoch 2   step 7100/8298   loss 0.1693
+epoch 2   step 7150/8298   loss 0.0812
+epoch 2   step 7200/8298   loss 0.2153
+epoch 2   step 7250/8298   loss 0.0410
+epoch 2   step 7300/8298   loss 0.0714
+epoch 2   step 7350/8298   loss 0.1211
+epoch 2   step 7400/8298   loss 0.0223
+epoch 2   step 7450/8298   loss 0.0166
+epoch 2   step 7500/8298   loss 0.0482
+epoch 2   step 7550/8298   loss 0.1183
+epoch 2   step 7600/8298   loss 0.0675
+epoch 2   step 7650/8298   loss 0.2585
+epoch 2   step 7700/8298   loss 0.0491
+epoch 2   step 7750/8298   loss 0.0396
+epoch 2   step 7800/8298   loss 0.2684
+epoch 2   step 7850/8298   loss 0.0285
+epoch 2   step 7900/8298   loss 0.2708
+epoch 2   step 7950/8298   loss 0.0278
+epoch 2   step 8000/8298   loss 0.0765
+epoch 2   step 8050/8298   loss 0.1453
+epoch 2   step 8100/8298   loss 0.0250
+epoch 2   step 8150/8298   loss 0.1870
+epoch 2   step 8200/8298   loss 0.0623
+epoch 2   step 8250/8298   loss 0.1606
+epoch 2   step 8298/8298   loss 0.4440
+16/2000
+32/2000
+48/2000
+64/2000
+80/2000
+96/2000
+112/2000
+128/2000
+144/2000
+160/2000
+176/2000
+192/2000
+208/2000
+224/2000
+240/2000
+256/2000
+272/2000
+288/2000
+304/2000
+320/2000
+336/2000
+352/2000
+368/2000
+384/2000
+400/2000
+416/2000
+432/2000
+448/2000
+464/2000
+480/2000
+496/2000
+512/2000
+528/2000
+544/2000
+560/2000
+576/2000
+592/2000
+608/2000
+624/2000
+640/2000
+656/2000
+672/2000
+688/2000
+704/2000
+720/2000
+736/2000
+752/2000
+768/2000
+784/2000
+800/2000
+816/2000
+832/2000
+848/2000
+864/2000
+880/2000
+896/2000
+912/2000
+928/2000
+944/2000
+960/2000
+976/2000
+992/2000
+1008/2000
+1024/2000
+1040/2000
+1056/2000
+1072/2000
+1088/2000
+1104/2000
+1120/2000
+1136/2000
+1152/2000
+1168/2000
+1184/2000
+1200/2000
+1216/2000
+1232/2000
+1248/2000
+1264/2000
+1280/2000
+1296/2000
+1312/2000
+1328/2000
+1344/2000
+1360/2000
+1376/2000
+1392/2000
+1408/2000
+1424/2000
+1440/2000
+1456/2000
+1472/2000
+1488/2000
+1504/2000
+1520/2000
+1536/2000
+1552/2000
+1568/2000
+1584/2000
+1600/2000
+1616/2000
+1632/2000
+1648/2000
+1664/2000
+1680/2000
+1696/2000
+1712/2000
+1728/2000
+1744/2000
+1760/2000
+1776/2000
+1792/2000
+1808/2000
+1824/2000
+1840/2000
+1856/2000
+1872/2000
+1888/2000
+1904/2000
+1920/2000
+1936/2000
+1952/2000
+1968/2000
+1984/2000
+2000/2000
+
+epoch 2   val accuracy 0.7090
+epoch 3   step 50/8298   loss 0.0739
+epoch 3   step 100/8298   loss 0.1340
+epoch 3   step 150/8298   loss 0.1354
+epoch 3   step 200/8298   loss 0.0355
+epoch 3   step 250/8298   loss 0.0091
+epoch 3   step 300/8298   loss 0.0823
+epoch 3   step 350/8298   loss 0.0259
+epoch 3   step 400/8298   loss 0.0194
+epoch 3   step 450/8298   loss 0.0797
+epoch 3   step 500/8298   loss 0.0808
+epoch 3   step 550/8298   loss 0.2031
+epoch 3   step 600/8298   loss 0.1253
+epoch 3   step 650/8298   loss 0.1446
+epoch 3   step 700/8298   loss 0.0579
+epoch 3   step 750/8298   loss 0.4283
+epoch 3   step 800/8298   loss 0.0673
+epoch 3   step 850/8298   loss 0.0382
+epoch 3   step 900/8298   loss 0.1924
+epoch 3   step 950/8298   loss 0.1240
+epoch 3   step 1000/8298   loss 0.1195
+epoch 3   step 1050/8298   loss 0.0320
+epoch 3   step 1100/8298   loss 0.0525
+epoch 3   step 1150/8298   loss 0.0571
+epoch 3   step 1200/8298   loss 0.0568
+epoch 3   step 1250/8298   loss 0.0584
+epoch 3   step 1300/8298   loss 0.0126
+epoch 3   step 1350/8298   loss 0.0719
+epoch 3   step 1400/8298   loss 0.1070
+epoch 3   step 1450/8298   loss 0.0600
+epoch 3   step 1500/8298   loss 0.0293
+epoch 3   step 1550/8298   loss 0.0370
+epoch 3   step 1600/8298   loss 0.1200
+epoch 3   step 1650/8298   loss 0.1835
+epoch 3   step 1700/8298   loss 0.0850
+epoch 3   step 1750/8298   loss 0.1075
+epoch 3   step 1800/8298   loss 0.1873
+epoch 3   step 1850/8298   loss 0.0482
+epoch 3   step 1900/8298   loss 0.0917
+epoch 3   step 1950/8298   loss 0.0464
+epoch 3   step 2000/8298   loss 0.0872
+epoch 3   step 2050/8298   loss 0.1224
+epoch 3   step 2100/8298   loss 0.0169
+epoch 3   step 2150/8298   loss 0.1397
+epoch 3   step 2200/8298   loss 0.2565
+epoch 3   step 2250/8298   loss 0.0372
+epoch 3   step 2300/8298   loss 0.0143
+epoch 3   step 2350/8298   loss 0.1133
+epoch 3   step 2400/8298   loss 0.1528
+epoch 3   step 2450/8298   loss 0.1807
+epoch 3   step 2500/8298   loss 0.0133
+epoch 3   step 2550/8298   loss 0.0407
+epoch 3   step 2600/8298   loss 0.2351
+epoch 3   step 2650/8298   loss 0.0609
+epoch 3   step 2700/8298   loss 0.0660
+epoch 3   step 2750/8298   loss 0.0877
+epoch 3   step 2800/8298   loss 0.0869
+epoch 3   step 2850/8298   loss 0.2455
+epoch 3   step 2900/8298   loss 0.1065
+epoch 3   step 2950/8298   loss 0.0065
+epoch 3   step 3000/8298   loss 0.1685
+epoch 3   step 3050/8298   loss 0.1140
+epoch 3   step 3100/8298   loss 0.0579
+epoch 3   step 3150/8298   loss 0.1224
+epoch 3   step 3200/8298   loss 0.1898
+epoch 3   step 3250/8298   loss 0.1700
+epoch 3   step 3300/8298   loss 0.0864
+epoch 3   step 3350/8298   loss 0.1104
+epoch 3   step 3400/8298   loss 0.1149
+epoch 3   step 3450/8298   loss 0.1666
+epoch 3   step 3500/8298   loss 0.1619
+epoch 3   step 3550/8298   loss 0.1103
+epoch 3   step 3600/8298   loss 0.1553
+epoch 3   step 3650/8298   loss 0.1799
+epoch 3   step 3700/8298   loss 0.0717
+epoch 3   step 3750/8298   loss 0.1080
+epoch 3   step 3800/8298   loss 0.0347
+epoch 3   step 3850/8298   loss 0.1358
+epoch 3   step 3900/8298   loss 0.1188
+epoch 3   step 3950/8298   loss 0.0852
+epoch 3   step 4000/8298   loss 0.0834
+epoch 3   step 4050/8298   loss 0.0646
+epoch 3   step 4100/8298   loss 0.0240
+epoch 3   step 4150/8298   loss 0.0112
+epoch 3   step 4200/8298   loss 0.0411
+epoch 3   step 4250/8298   loss 0.1175
+epoch 3   step 4300/8298   loss 0.0699
+epoch 3   step 4350/8298   loss 0.2480
+epoch 3   step 4400/8298   loss 0.1179
+epoch 3   step 4450/8298   loss 0.1190
+epoch 3   step 4500/8298   loss 0.0315
+epoch 3   step 4550/8298   loss 0.1356
+epoch 3   step 4600/8298   loss 0.1280
+epoch 3   step 4650/8298   loss 0.1655
+epoch 3   step 4700/8298   loss 0.2073
+epoch 3   step 4750/8298   loss 0.4092
+epoch 3   step 4800/8298   loss 0.0404
+epoch 3   step 4850/8298   loss 0.0302
+epoch 3   step 4900/8298   loss 0.0338
+epoch 3   step 4950/8298   loss 0.0462
+epoch 3   step 5000/8298   loss 0.1031
+epoch 3   step 5050/8298   loss 0.1979
+epoch 3   step 5100/8298   loss 0.1471
+epoch 3   step 5150/8298   loss 0.1819
+epoch 3   step 5200/8298   loss 0.1127
+epoch 3   step 5250/8298   loss 0.0284
+epoch 3   step 5300/8298   loss 0.0276
+epoch 3   step 5350/8298   loss 0.0521
+epoch 3   step 5400/8298   loss 0.0375
+epoch 3   step 5450/8298   loss 0.0059
+epoch 3   step 5500/8298   loss 0.2219
+epoch 3   step 5550/8298   loss 0.1246
+epoch 3   step 5600/8298   loss 0.2128
+epoch 3   step 5650/8298   loss 0.2030
+epoch 3   step 5700/8298   loss 0.2167
+epoch 3   step 5750/8298   loss 0.0796
+epoch 3   step 5800/8298   loss 0.1484
+epoch 3   step 5850/8298   loss 0.2307
+epoch 3   step 5900/8298   loss 0.0683
+epoch 3   step 5950/8298   loss 0.0528
+epoch 3   step 6000/8298   loss 0.0808
+epoch 3   step 6050/8298   loss 0.0309
+epoch 3   step 6100/8298   loss 0.0050
+epoch 3   step 6150/8298   loss 0.1262
+epoch 3   step 6200/8298   loss 0.2111
+epoch 3   step 6250/8298   loss 0.1267
+epoch 3   step 6300/8298   loss 0.3945
+epoch 3   step 6350/8298   loss 0.0494
+epoch 3   step 6400/8298   loss 0.1194
+epoch 3   step 6450/8298   loss 0.3311
+epoch 3   step 6500/8298   loss 0.0201
+epoch 3   step 6550/8298   loss 0.2827
+epoch 3   step 6600/8298   loss 0.1481
+epoch 3   step 6650/8298   loss 0.0751
+epoch 3   step 6700/8298   loss 0.2667
+epoch 3   step 6750/8298   loss 0.0968
+epoch 3   step 6800/8298   loss 0.2283
+epoch 3   step 6850/8298   loss 0.2792
+epoch 3   step 6900/8298   loss 0.1031
+epoch 3   step 6950/8298   loss 0.0940
+epoch 3   step 7000/8298   loss 0.0488
+epoch 3   step 7050/8298   loss 0.0794
+epoch 3   step 7100/8298   loss 0.1019
+epoch 3   step 7150/8298   loss 0.1231
+epoch 3   step 7200/8298   loss 0.0613
+epoch 3   step 7250/8298   loss 0.0520
+epoch 3   step 7300/8298   loss 0.3401
+epoch 3   step 7350/8298   loss 0.0233
+epoch 3   step 7400/8298   loss 0.0429
+epoch 3   step 7450/8298   loss 0.2103
+epoch 3   step 7500/8298   loss 0.3888
+epoch 3   step 7550/8298   loss 0.0570
+epoch 3   step 7600/8298   loss 0.1384
+epoch 3   step 7650/8298   loss 0.2068
+epoch 3   step 7700/8298   loss 0.0230
+epoch 3   step 7750/8298   loss 0.2674
+epoch 3   step 7800/8298   loss 0.0066
+epoch 3   step 7850/8298   loss 0.0553
+epoch 3   step 7900/8298   loss 0.0499
+epoch 3   step 7950/8298   loss 0.1236
+epoch 3   step 8000/8298   loss 0.0333
+epoch 3   step 8050/8298   loss 0.2077
+epoch 3   step 8100/8298   loss 0.1593
+epoch 3   step 8150/8298   loss 0.0568
+epoch 3   step 8200/8298   loss 0.0760
+epoch 3   step 8250/8298   loss 0.0207
+epoch 3   step 8298/8298   loss 0.0662
+16/2000
+32/2000
+48/2000
+64/2000
+80/2000
+96/2000
+112/2000
+128/2000
+144/2000
+160/2000
+176/2000
+192/2000
+208/2000
+224/2000
+240/2000
+256/2000
+272/2000
+288/2000
+304/2000
+320/2000
+336/2000
+352/2000
+368/2000
+384/2000
+400/2000
+416/2000
+432/2000
+448/2000
+464/2000
+480/2000
+496/2000
+512/2000
+528/2000
+544/2000
+560/2000
+576/2000
+592/2000
+608/2000
+624/2000
+640/2000
+656/2000
+672/2000
+688/2000
+704/2000
+720/2000
+736/2000
+752/2000
+768/2000
+784/2000
+800/2000
+816/2000
+832/2000
+848/2000
+864/2000
+880/2000
+896/2000
+912/2000
+928/2000
+944/2000
+960/2000
+976/2000
+992/2000
+1008/2000
+1024/2000
+1040/2000
+1056/2000
+1072/2000
+1088/2000
+1104/2000
+1120/2000
+1136/2000
+1152/2000
+1168/2000
+1184/2000
+1200/2000
+1216/2000
+1232/2000
+1248/2000
+1264/2000
+1280/2000
+1296/2000
+1312/2000
+1328/2000
+1344/2000
+1360/2000
+1376/2000
+1392/2000
+1408/2000
+1424/2000
+1440/2000
+1456/2000
+1472/2000
+1488/2000
+1504/2000
+1520/2000
+1536/2000
+1552/2000
+1568/2000
+1584/2000
+1600/2000
+1616/2000
+1632/2000
+1648/2000
+1664/2000
+1680/2000
+1696/2000
+1712/2000
+1728/2000
+1744/2000
+1760/2000
+1776/2000
+1792/2000
+1808/2000
+1824/2000
+1840/2000
+1856/2000
+1872/2000
+1888/2000
+1904/2000
+1920/2000
+1936/2000
+1952/2000
+1968/2000
+1984/2000
+2000/2000
+
+epoch 3   val accuracy 0.7345
+epoch 4   step 50/8298   loss 0.2102
+epoch 4   step 100/8298   loss 0.2742
+epoch 4   step 150/8298   loss 0.0218
+epoch 4   step 200/8298   loss 0.0119
+epoch 4   step 250/8298   loss 0.0809
+epoch 4   step 300/8298   loss 0.1283
+epoch 4   step 350/8298   loss 0.0382
+epoch 4   step 400/8298   loss 0.1626
+epoch 4   step 450/8298   loss 0.1340
+epoch 4   step 500/8298   loss 0.0937
+epoch 4   step 550/8298   loss 0.0328
+epoch 4   step 600/8298   loss 0.0697
+epoch 4   step 650/8298   loss 0.0139
+epoch 4   step 700/8298   loss 0.2616
+epoch 4   step 750/8298   loss 0.1774
+epoch 4   step 800/8298   loss 0.1679
+epoch 4   step 850/8298   loss 0.0849
+epoch 4   step 900/8298   loss 0.2011
+epoch 4   step 950/8298   loss 0.1325
+epoch 4   step 1000/8298   loss 0.0970
+epoch 4   step 1050/8298   loss 0.0641
+epoch 4   step 1100/8298   loss 0.0359
+epoch 4   step 1150/8298   loss 0.1303
+epoch 4   step 1200/8298   loss 0.0560
+epoch 4   step 1250/8298   loss 0.1434
+epoch 4   step 1300/8298   loss 0.0301
+epoch 4   step 1350/8298   loss 0.2491
+epoch 4   step 1400/8298   loss 0.0587
+epoch 4   step 1450/8298   loss 0.0703
+epoch 4   step 1500/8298   loss 0.0100
+epoch 4   step 1550/8298   loss 0.2400
+epoch 4   step 1600/8298   loss 0.0830
+epoch 4   step 1650/8298   loss 0.0097
+epoch 4   step 1700/8298   loss 0.0339
+epoch 4   step 1750/8298   loss 0.0852
+epoch 4   step 1800/8298   loss 0.0369
+epoch 4   step 1850/8298   loss 0.0396
+epoch 4   step 1900/8298   loss 0.1353
+epoch 4   step 1950/8298   loss 0.0131
+epoch 4   step 2000/8298   loss 0.1050
+epoch 4   step 2050/8298   loss 0.1785
+epoch 4   step 2100/8298   loss 0.0850
+epoch 4   step 2150/8298   loss 0.0602
+epoch 4   step 2200/8298   loss 0.0622
+epoch 4   step 2250/8298   loss 0.0971
+epoch 4   step 2300/8298   loss 0.2413
+epoch 4   step 2350/8298   loss 0.0526
+epoch 4   step 2400/8298   loss 0.1193
+epoch 4   step 2450/8298   loss 0.1336
+epoch 4   step 2500/8298   loss 0.1686
+epoch 4   step 2550/8298   loss 0.0871
+epoch 4   step 2600/8298   loss 0.0562
+epoch 4   step 2650/8298   loss 0.0578
+epoch 4   step 2700/8298   loss 0.1087
+epoch 4   step 2750/8298   loss 0.0638
+epoch 4   step 2800/8298   loss 0.1298
+epoch 4   step 2850/8298   loss 0.0221
+epoch 4   step 2900/8298   loss 0.1219
+epoch 4   step 2950/8298   loss 0.0083
+epoch 4   step 3000/8298   loss 0.1609
+epoch 4   step 3050/8298   loss 0.1985
+epoch 4   step 3100/8298   loss 0.0077
+epoch 4   step 3150/8298   loss 0.0223
+epoch 4   step 3200/8298   loss 0.0533
+epoch 4   step 3250/8298   loss 0.3051
+epoch 4   step 3300/8298   loss 0.0326
+epoch 4   step 3350/8298   loss 0.1097
+epoch 4   step 3400/8298   loss 0.0382
+epoch 4   step 3450/8298   loss 0.2416
+epoch 4   step 3500/8298   loss 0.1880
+epoch 4   step 3550/8298   loss 0.3815
+epoch 4   step 3600/8298   loss 0.1076
+epoch 4   step 3650/8298   loss 0.0502
+epoch 4   step 3700/8298   loss 0.0555
+epoch 4   step 3750/8298   loss 0.1141
+epoch 4   step 3800/8298   loss 0.0538
+epoch 4   step 3850/8298   loss 0.3023
+epoch 4   step 3900/8298   loss 0.1199
+epoch 4   step 3950/8298   loss 0.1524
+epoch 4   step 4000/8298   loss 0.0570
+epoch 4   step 4050/8298   loss 0.0991
+epoch 4   step 4100/8298   loss 0.1065
+epoch 4   step 4150/8298   loss 0.0185
+epoch 4   step 4200/8298   loss 0.0635
+epoch 4   step 4250/8298   loss 0.1030
+epoch 4   step 4300/8298   loss 0.0270
+epoch 4   step 4350/8298   loss 0.0502
+epoch 4   step 4400/8298   loss 0.0716
+epoch 4   step 4450/8298   loss 0.0364
+epoch 4   step 4500/8298   loss 0.0444
+epoch 4   step 4550/8298   loss 0.0353
+epoch 4   step 4600/8298   loss 0.1479
+epoch 4   step 4650/8298   loss 0.0062
+epoch 4   step 4700/8298   loss 0.0829
+epoch 4   step 4750/8298   loss 0.0071
+epoch 4   step 4800/8298   loss 0.0166
+epoch 4   step 4850/8298   loss 0.1496
+epoch 4   step 4900/8298   loss 0.1131
+epoch 4   step 4950/8298   loss 0.0952
+epoch 4   step 5000/8298   loss 0.0651
+epoch 4   step 5050/8298   loss 0.0151
+epoch 4   step 5100/8298   loss 0.0246
+epoch 4   step 5150/8298   loss 0.1431
+epoch 4   step 5200/8298   loss 0.0133
+epoch 4   step 5250/8298   loss 0.1469
+epoch 4   step 5300/8298   loss 0.0471
+epoch 4   step 5350/8298   loss 0.1393
+epoch 4   step 5400/8298   loss 0.1402
+epoch 4   step 5450/8298   loss 0.2486
+epoch 4   step 5500/8298   loss 0.1049
+epoch 4   step 5550/8298   loss 0.1601
+epoch 4   step 5600/8298   loss 0.0453
+epoch 4   step 5650/8298   loss 0.1039
+epoch 4   step 5700/8298   loss 0.1081
+epoch 4   step 5750/8298   loss 0.0205
+epoch 4   step 5800/8298   loss 0.1841
+epoch 4   step 5850/8298   loss 0.1843
+epoch 4   step 5900/8298   loss 0.0615
+epoch 4   step 5950/8298   loss 0.1522
+epoch 4   step 6000/8298   loss 0.2265
+epoch 4   step 6050/8298   loss 0.0195
+epoch 4   step 6100/8298   loss 0.1079
+epoch 4   step 6150/8298   loss 0.0931
+epoch 4   step 6200/8298   loss 0.0773
+epoch 4   step 6250/8298   loss 0.0734
+epoch 4   step 6300/8298   loss 0.2764
+epoch 4   step 6350/8298   loss 0.0591
+epoch 4   step 6400/8298   loss 0.0501
+epoch 4   step 6450/8298   loss 0.1405
+epoch 4   step 6500/8298   loss 0.0276
+epoch 4   step 6550/8298   loss 0.0419
+epoch 4   step 6600/8298   loss 0.2152
+epoch 4   step 6650/8298   loss 0.1709
+epoch 4   step 6700/8298   loss 0.0049
+epoch 4   step 6750/8298   loss 0.0376
+epoch 4   step 6800/8298   loss 0.0041
+epoch 4   step 6850/8298   loss 0.1942
+epoch 4   step 6900/8298   loss 0.0361
+epoch 4   step 6950/8298   loss 0.0363
+epoch 4   step 7000/8298   loss 0.0389
+epoch 4   step 7050/8298   loss 0.2348
+epoch 4   step 7100/8298   loss 0.0454
+epoch 4   step 7150/8298   loss 0.2004
+epoch 4   step 7200/8298   loss 0.0381
+epoch 4   step 7250/8298   loss 0.0124
+epoch 4   step 7300/8298   loss 0.2230
+epoch 4   step 7350/8298   loss 0.0614
+epoch 4   step 7400/8298   loss 0.0371
+epoch 4   step 7450/8298   loss 0.0540
+epoch 4   step 7500/8298   loss 0.2436
+epoch 4   step 7550/8298   loss 0.0414
+epoch 4   step 7600/8298   loss 0.0276
+epoch 4   step 7650/8298   loss 0.0211
+epoch 4   step 7700/8298   loss 0.0318
+epoch 4   step 7750/8298   loss 0.0384
+epoch 4   step 7800/8298   loss 0.1077
+epoch 4   step 7850/8298   loss 0.0629
+epoch 4   step 7900/8298   loss 0.1441
+epoch 4   step 7950/8298   loss 0.1138
+epoch 4   step 8000/8298   loss 0.1050
+epoch 4   step 8050/8298   loss 0.1231
+epoch 4   step 8100/8298   loss 0.1444
+epoch 4   step 8150/8298   loss 0.0776
+epoch 4   step 8200/8298   loss 0.2019
+epoch 4   step 8250/8298   loss 0.0136
+epoch 4   step 8298/8298   loss 0.0112
+16/2000
+32/2000
+48/2000
+64/2000
+80/2000
+96/2000
+112/2000
+128/2000
+144/2000
+160/2000
+176/2000
+192/2000
+208/2000
+224/2000
+240/2000
+256/2000
+272/2000
+288/2000
+304/2000
+320/2000
+336/2000
+352/2000
+368/2000
+384/2000
+400/2000
+416/2000
+432/2000
+448/2000
+464/2000
+480/2000
+496/2000
+512/2000
+528/2000
+544/2000
+560/2000
+576/2000
+592/2000
+608/2000
+624/2000
+640/2000
+656/2000
+672/2000
+688/2000
+704/2000
+720/2000
+736/2000
+752/2000
+768/2000
+784/2000
+800/2000
+816/2000
+832/2000
+848/2000
+864/2000
+880/2000
+896/2000
+912/2000
+928/2000
+944/2000
+960/2000
+976/2000
+992/2000
+1008/2000
+1024/2000
+1040/2000
+1056/2000
+1072/2000
+1088/2000
+1104/2000
+1120/2000
+1136/2000
+1152/2000
+1168/2000
+1184/2000
+1200/2000
+1216/2000
+1232/2000
+1248/2000
+1264/2000
+1280/2000
+1296/2000
+1312/2000
+1328/2000
+1344/2000
+1360/2000
+1376/2000
+1392/2000
+1408/2000
+1424/2000
+1440/2000
+1456/2000
+1472/2000
+1488/2000
+1504/2000
+1520/2000
+1536/2000
+1552/2000
+1568/2000
+1584/2000
+1600/2000
+1616/2000
+1632/2000
+1648/2000
+1664/2000
+1680/2000
+1696/2000
+1712/2000
+1728/2000
+1744/2000
+1760/2000
+1776/2000
+1792/2000
+1808/2000
+1824/2000
+1840/2000
+1856/2000
+1872/2000
+1888/2000
+1904/2000
+1920/2000
+1936/2000
+1952/2000
+1968/2000
+1984/2000
+2000/2000
+
+epoch 4   val accuracy 0.7070
+best val accuracy 0.7345
+16/3573
+32/3573
+48/3573
+64/3573
+80/3573
+96/3573
+112/3573
+128/3573
+144/3573
+160/3573
+176/3573
+192/3573
+208/3573
+224/3573
+240/3573
+256/3573
+272/3573
+288/3573
+304/3573
+320/3573
+336/3573
+352/3573
+368/3573
+384/3573
+400/3573
+416/3573
+432/3573
+448/3573
+464/3573
+480/3573
+496/3573
+512/3573
+528/3573
+544/3573
+560/3573
+576/3573
+592/3573
+608/3573
+624/3573
+640/3573
+656/3573
+672/3573
+688/3573
+704/3573
+720/3573
+736/3573
+752/3573
+768/3573
+784/3573
+800/3573
+816/3573
+832/3573
+848/3573
+864/3573
+880/3573
+896/3573
+912/3573
+928/3573
+944/3573
+960/3573
+976/3573
+992/3573
+1008/3573
+1024/3573
+1040/3573
+1056/3573
+1072/3573
+1088/3573
+1104/3573
+1120/3573
+1136/3573
+1152/3573
+1168/3573
+1184/3573
+1200/3573
+1216/3573
+1232/3573
+1248/3573
+1264/3573
+1280/3573
+1296/3573
+1312/3573
+1328/3573
+1344/3573
+1360/3573
+1376/3573
+1392/3573
+1408/3573
+1424/3573
+1440/3573
+1456/3573
+1472/3573
+1488/3573
+1504/3573
+1520/3573
+1536/3573
+1552/3573
+1568/3573
+1584/3573
+1600/3573
+1616/3573
+1632/3573
+1648/3573
+1664/3573
+1680/3573
+1696/3573
+1712/3573
+1728/3573
+1744/3573
+1760/3573
+1776/3573
+1792/3573
+1808/3573
+1824/3573
+1840/3573
+1856/3573
+1872/3573
+1888/3573
+1904/3573
+1920/3573
+1936/3573
+1952/3573
+1968/3573
+1984/3573
+2000/3573
+2016/3573
+2032/3573
+2048/3573
+2064/3573
+2080/3573
+2096/3573
+2112/3573
+2128/3573
+2144/3573
+2160/3573
+2176/3573
+2192/3573
+2208/3573
+2224/3573
+2240/3573
+2256/3573
+2272/3573
+2288/3573
+2304/3573
+2320/3573
+2336/3573
+2352/3573
+2368/3573
+2384/3573
+2400/3573
+2416/3573
+2432/3573
+2448/3573
+2464/3573
+2480/3573
+2496/3573
+2512/3573
+2528/3573
+2544/3573
+2560/3573
+2576/3573
+2592/3573
+2608/3573
+2624/3573
+2640/3573
+2656/3573
+2672/3573
+2688/3573
+2704/3573
+2720/3573
+2736/3573
+2752/3573
+2768/3573
+2784/3573
+2800/3573
+2816/3573
+2832/3573
+2848/3573
+2864/3573
+2880/3573
+2896/3573
+2912/3573
+2928/3573
+2944/3573
+2960/3573
+2976/3573
+2992/3573
+3008/3573
+3024/3573
+3040/3573
+3056/3573
+3072/3573
+3088/3573
+3104/3573
+3120/3573
+3136/3573
+3152/3573
+3168/3573
+3184/3573
+3200/3573
+3216/3573
+3232/3573
+3248/3573
+3264/3573
+3280/3573
+3296/3573
+3312/3573
+3328/3573
+3344/3573
+3360/3573
+3376/3573
+3392/3573
+3408/3573
+3424/3573
+3440/3573
+3456/3573
+3472/3573
+3488/3573
+3504/3573
+3520/3573
+3536/3573
+3552/3573
+3568/3573
+3573/3573
+
+8/8
+
+qwen_finetune: accuracy 0.7873   macro F1 0.6001   train 17518.12 s   inference 50.3943 ms/image
+internet images (true -> predicted): Angry -> Angry, Contempt -> Neutral, Disgust -> Disgust, Fear -> Surprise, Happy -> Happy, Neutral -> Neutral, Sad -> Sad, Surprise -> Surprise
+saved D:\face_expression_classification_Comparison-main\results\qwen_finetune.json

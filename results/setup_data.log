@@ -1,0 +1,5 @@
+train: 66379 images, per emotion {'Angry': 8000, 'Contempt': 8000, 'Disgust': 8000, 'Fear': 8000, 'Happy': 8000, 'Neutral': 10379, 'Sad': 8000, 'Surprise': 8000}
+val: 8341 images, per emotion {'Angry': 1000, 'Contempt': 1000, 'Disgust': 1000, 'Fear': 1000, 'Happy': 1000, 'Neutral': 1341, 'Sad': 1000, 'Surprise': 1000}
+test: 3573 images, per emotion {'Angry': 322, 'Contempt': 30, 'Disgust': 21, 'Fear': 98, 'Happy': 929, 'Neutral': 1274, 'Sad': 449, 'Surprise': 450}
+internet images: 8
+saved D:\face_expression_classification_Comparison-main\results\preview.png

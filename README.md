@@ -43,3 +43,22 @@ The MLP and the CNN train for 80 epochs and Qwen fine-tuning for 4. Each of the 
 The notebook writes `results/summary.csv` and the chart images, including `results/internet_images.png`.
 
 Use no flags for the final numbers, and run all four models on one machine so the timings are comparable.
+
+## Use the fine-tuned Qwen in LM Studio
+
+LM Studio reads GGUF files, so the LoRA adapter in `qwen_lora/` has to be merged into Qwen and converted first:
+
+```
+git clone --depth 1 https://github.com/ggml-org/llama.cpp
+python export_gguf.py
+```
+
+This writes the model and its vision file (`mmproj-...`) to `~/.lmstudio/models/local/qwen2vl-fer-finetuned/`. It needs about 9 GB of free disk space while it runs.
+
+To check the converted model, load it in LM Studio, start the local server (`lms server start`), then:
+
+```
+python lmstudio_test.py
+```
+
+It scores the first 200 test images through LM Studio. The model was trained on one question, so ask it exactly that: the `PROMPT` in `qwen_zeroshot.py`, with a 224 x 224 picture of a face.
