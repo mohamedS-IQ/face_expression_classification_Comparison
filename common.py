@@ -18,6 +18,7 @@ FOLDERS = ["angry", "contempt", "disgust", "fear", "happy", "neutral", "sad", "s
 EMOTIONS = ["Angry", "Contempt", "Disgust", "Fear", "Happy", "Neutral", "Sad", "Surprise"]
 SPLITS = {"train": "train", "validation": "val", "test": "test"}
 IMAGE_SIZE = 48
+TRAIN_SCORE_IMAGES = 10000
 PROJECT_DIR = Path(__file__).resolve().parent
 CACHE_PATH = PROJECT_DIR / "ferplus_cache.npz"
 RESULTS_DIR = PROJECT_DIR / "results"
@@ -36,7 +37,7 @@ TRAIN_TRANSFORM = transforms.Compose([
 def parse_args(default_epochs=1):
     parser = argparse.ArgumentParser()
     parser.add_argument("--n-train", type=int, default=None, help="use only the first N training images")
-    parser.add_argument("--n-test", type=int, default=None, help="use only the first N test images")
+    parser.add_argument("--n-test", type=int, default=None, help="score only the first N images of each set")
     parser.add_argument("--epochs", type=int, default=default_epochs)
     return parser.parse_args()
 
@@ -98,6 +99,16 @@ def load_data():
 def load_internet_images():
     images = np.stack([load_image(INTERNET_DIR / f"{name.lower()}.png") for name in EMOTIONS])
     labels = np.arange(len(EMOTIONS), dtype=np.int64)
+    return images, labels
+
+
+def scoring_data(data, args):
+    train_x = data["x_train"][:args.n_train][:TRAIN_SCORE_IMAGES]
+    train_y = data["y_train"][:args.n_train][:TRAIN_SCORE_IMAGES]
+    sets = {"train": (train_x, train_y), "validation": (data["x_val"], data["y_val"]), "test": (data["x_test"], data["y_test"])}
+    images = {name: x[:args.n_test] for name, (x, y) in sets.items()}
+    labels = {name: y[:args.n_test] for name, (x, y) in sets.items()}
+    images["internet"], labels["internet"] = load_internet_images()
     return images, labels
 
 
@@ -178,30 +189,33 @@ def model_size_mb(model):
     return (param_bytes + buffer_bytes) / 1e6
 
 
-def report(name, y_true, y_pred, model, train_time_s, inference_time_s, internet_pred, extra=None):
-    y_true, y_pred = np.asarray(y_true), np.asarray(y_pred)
+def report(name, model, train_time_s, inference_time_s, labels, answers, extra=None):
     results = {
         "model": name,
         "device": torch.cuda.get_device_name(0) if torch.cuda.is_available() else "cpu",
-        "n_test": int(len(y_true)),
-        **evaluate(y_true, y_pred),
         "train_time_s": round(train_time_s, 2),
-        "inference_ms_per_image": round(1000 * inference_time_s / len(y_true), 4),
+        "inference_ms_per_image": round(1000 * inference_time_s / len(labels["test"]), 4),
         "params": count_parameters(model),
         "size_mb": round(model_size_mb(model), 2),
         "peak_gpu_mb": round(torch.cuda.max_memory_allocated() / 1e6, 1) if torch.cuda.is_available() else 0.0,
         **(extra or {}),
-        "internet_predictions": [EMOTIONS[p] if p >= 0 else "unclear" for p in internet_pred],
-        "predictions": y_pred.tolist(),
     }
+    for set_name, y_true in labels.items():
+        y_pred = np.asarray(answers[set_name])
+        results[set_name] = {"images": len(y_true), **evaluate(y_true, y_pred), "predictions": y_pred.tolist()}
     RESULTS_DIR.mkdir(exist_ok=True)
     path = RESULTS_DIR / f"{name}.json"
     with open(path, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"{name}: accuracy {results['accuracy']:.4f}   macro F1 {results['macro_f1']:.4f}   "
-          f"train {results['train_time_s']} s   inference {results['inference_ms_per_image']} ms/image")
-    pairs = [f"{true} -> {guess}" for true, guess in zip(EMOTIONS, results["internet_predictions"])]
-    print("internet images (true -> predicted): " + ", ".join(pairs))
+
+    print(name)
+    for set_name in labels:
+        scores = results[set_name]
+        print(f"  {set_name:10s} {scores['images']:6d} images   accuracy {scores['accuracy']:.4f}   macro F1 {scores['macro_f1']:.4f}")
+    print(f"  train {results['train_time_s']} s   inference {results['inference_ms_per_image']} ms/image")
+    guesses = [EMOTIONS[p] if p >= 0 else "unclear" for p in answers["internet"]]
+    pairs = [f"{true} -> {guess}" for true, guess in zip(EMOTIONS, guesses)]
+    print("  internet images (true -> predicted): " + ", ".join(pairs))
     print(f"saved {path}")
     return results
 

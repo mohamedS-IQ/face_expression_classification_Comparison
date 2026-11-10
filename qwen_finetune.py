@@ -7,7 +7,7 @@ from peft import LoraConfig, get_peft_model
 import common
 from qwen_zeroshot import load_model, predict_all, prompt_text, to_pil
 
-EPOCHS = 4
+EPOCHS = 1
 BATCH_SIZE = 8
 LEARNING_RATE = 2e-4
 VAL_IMAGES = 2000
@@ -67,8 +67,7 @@ def main():
     data = common.load_data()
     x_train, y_train = data["x_train"][:args.n_train], data["y_train"][:args.n_train]
     x_val, y_val = data["x_val"][:VAL_IMAGES], data["y_val"][:VAL_IMAGES]
-    x_test, y_test = data["x_test"][:args.n_test], data["y_test"][:args.n_test]
-    internet_x, _ = common.load_internet_images()
+    images, labels = common.scoring_data(data, args)
 
     model, processor = load_model()
     lora_config = LoraConfig(
@@ -85,12 +84,14 @@ def main():
         train(model, processor, x_train, y_train, x_val, y_val, args.epochs)
 
     with common.Timer() as test_timer:
-        predictions = predict_all(model, processor, x_test)
-    internet = predict_all(model, processor, internet_x)
+        answers = {"test": predict_all(model, processor, images["test"])}
+    for name in ("train", "validation", "internet"):
+        print(f"scoring the {name} images")
+        answers[name] = predict_all(model, processor, images[name])
 
-    unparsed = sum(p == -1 for p in predictions)
+    unparsed = sum(p == -1 for p in answers["test"])
     extra = {"unparsed": unparsed, "trainable_params": common.count_parameters(model, trainable_only=True)}
-    common.report("qwen_finetune", y_test, predictions, model, train_timer.seconds, test_timer.seconds, internet, extra=extra)
+    common.report("qwen_finetune", model, train_timer.seconds, test_timer.seconds, labels, answers, extra=extra)
 
 
 if __name__ == "__main__":
